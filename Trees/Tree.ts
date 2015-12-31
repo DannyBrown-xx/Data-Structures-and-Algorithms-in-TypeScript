@@ -1,6 +1,8 @@
 import Employee from '../Comparable/Employee';
+import IComparable from '../Comparable/IComparable';
+import Comparison from '../Comparable/Comparison';
 
-class Tree<T> {
+class Tree<T extends IComparable<any>> {
     private _dataAsArray:T[];
     
     constructor(initialItems:T[]) {
@@ -18,7 +20,9 @@ class Tree<T> {
             return;
         }
         
-        //        
+        if(item.Compare(this._dataAsArray[0]) == Comparison.Equal) {
+            
+        }
     }
 }
 
